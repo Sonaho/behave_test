@@ -2,15 +2,15 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from behave import *
 
-@given ('Load pypi.org site and search')
+@given ('I launch Chrome browser')
 def step_impl(context):
     PATH = "D://DEV/chromedriver/chromedriver.exe"
     context.driver = webdriver.Chrome(PATH)
 
-@when ('I open "{url}" and compare "{title}"')
-def step_impl(context, title):
+@when ('I open "{web}" and compare "{title}"')
+def step_impl(context, web, title):
 	test = True
-	driver.get("url")
+	context.driver.get(web)
 	if context.driver.title != title:
 		test = False
 	context.driver.quit()
@@ -19,7 +19,7 @@ def step_impl(context, title):
 @when ("I search selenium")
 def step_impl(context):
 	context.driver.find_element(By.ID, "search").send_keys('selenium')
-	context.driver.find_element(By.CLASS_NAME, "search-form__button").click()
+
 
 @then ('I landing at page "{web}"')
 def step_impl(context, web):
