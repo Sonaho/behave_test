@@ -8,6 +8,8 @@ Install Python 3
 
 brew install python
 
+https://www.groovypost.com/howto/install-pip-on-a-mac
+
 https://pypi.org/project/webdriver-manager/
 
 Install requests
