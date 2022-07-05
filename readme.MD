@@ -1,4 +1,4 @@
-
+https://gq67r.mocklab.io/escuela42/newspapers
 For mac OS
 Install BREW
 
